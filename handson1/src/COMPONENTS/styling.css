@@ -1,0 +1,49 @@
+body{
+    background-image:linear-gradient(to bottom, lightblue, pink, white);
+    background-repeat:no-repeat;
+    height:650px;
+}
+h1{
+    text-shadow:0 4px cyan;
+    text-align: center;
+}
+button{
+    height:50px;
+    width:250px;
+    border:1px solid black;
+    border-radius:25px;
+    background-color:lightskyblue;
+    transition:1s background-color linear;
+}
+#btn1{
+    margin-left: 400px;
+}
+#btn2{
+   margin-left: 80px;
+}
+button:hover{
+    background-color: aqua;
+}
+.Box{
+    height:230px;
+    width:480px;
+    border:1px solid black;
+    border-radius:20px;
+    background-color: aqua;
+    margin-top:150px;
+    text-align:center;
+}
+.lineOne{
+    color:blueviolet;
+}
+#leftBox{
+    margin-left:80px;
+}
+#rightBox{
+    margin-left:20px;
+    background-color:violet;
+}
+.row{
+    display:flex;
+    justify-content:space-evenly;
+}
