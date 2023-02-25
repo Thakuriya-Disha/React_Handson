@@ -1,5 +1,5 @@
 
-const DisplayBox = () => {
+const DisplayBox = (props) => {
     return(
         <div className="dataBox">
             <div className="displayBox">
