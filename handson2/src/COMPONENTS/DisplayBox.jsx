@@ -1,4 +1,4 @@
-
+import "./style.css";
 const DisplayBox = (props) => {
     return(
         <div className="dataBox">

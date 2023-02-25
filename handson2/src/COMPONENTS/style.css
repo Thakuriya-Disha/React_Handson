@@ -1,20 +1,21 @@
 body{
     background-image: linear-gradient(lightblue,pink,white);
     text-align: center;
+    height:700px;
 }
 input{
     border:1px solid black;
     border-radius:25px;
-    background-color: lightskyblue;
-    width:85px;
-    height:65px;
+    background-color: lightblue;
+    width:200px;
+    height:40px;
 }
 button{
     border:1px solid black;
     border-radius:25px;
     background-color:lightskyblue;
-    width:85px;
-    height:65px;
+    width:200px;
+    height:40px;
     transition: 1s background-color linear;
     font-size: 18px;
 }

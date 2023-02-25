@@ -9,7 +9,7 @@ const Form = () => {
         rating: 0
     });
 
-    const handleOnSubmit = (event) => {
+    const handleOnChange = (event) => {
         const {name, value} = event.target;
         setFormState({...formState, [name]:value});
     };
@@ -26,16 +26,16 @@ const Form = () => {
         <div>
             <h1>Employee Feedback Form</h1>
             <form>
-                <label> Name:
-                    <input type={"text"} name={"fullname"} value={formState.name} onSubmit={handleOnSubmit} />
+                <label> Name: &nbsp; &nbsp;
+                    <input type={"text"} name={"fullname"} value={formState.name} onChange={handleOnChange} />
                 </label>
                 <br/><br/>
-                <label> Department:
-                    <input type={"text"} name={"department"} value={formState.department} onSubmit={handleOnSubmit} />
+                <label> Department: &nbsp; &nbsp;
+                    <input type={"text"} name={"department"} value={formState.department} onChange={handleOnChange} />
                 </label>
                 <br/><br/>
-                <label> Rating:
-                    <input type={"number"} name={"rating"} value={formState.rating} onSubmit={handleOnSubmit} />
+                <label> Rating: &nbsp; &nbsp;
+                    <input type={"number"} name={"rating"} value={formState.rating} onChange={handleOnChange} />
                 </label>
                 <br/><br/><br/><br/>
                 <button type="submit" onClick={buttonFunc}>Submit</button>
