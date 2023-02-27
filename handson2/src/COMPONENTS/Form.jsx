@@ -1,12 +1,13 @@
 import { useState } from "react";
 import './style.css';
-import DisplayBox from "./DisplayBox";
+
 const Form = () => {
 
     const [formState, setFormState] = useState({
         name:"",
         department:"",
-        rating: 0
+        rating: 0,
+        data:[]
     });
 
     const handleOnChange = (event) => {
@@ -15,10 +16,25 @@ const Form = () => {
     };
 
     const buttonFunc = () => {
+        const saveData = {
+            name: formState.name,
+            department: formState.department,
+            rating: formState.rating
+        }
+        const arr = formState.data;
+        arr.push(saveData);
+        setFormState({data : arr});
+
         formState.map( (item,index)=>{
             return(
-                <DisplayBox Name={item.name} Department={item.department} Rating={item.rating} />
-            );  
+                <div className="dataBox">
+                    <div className="displayBox">
+                        <span>Name: {item.name} | </span>
+                        <span>Department: {item.department} | </span>
+                        <span>Rating: {item.rating}</span>
+                    </div>
+                </div>
+            );
         });
     };
 
@@ -40,7 +56,6 @@ const Form = () => {
                 <br/><br/><br/><br/>
                 <button type="submit" onClick={buttonFunc}>Submit</button>
             </form>
-            <hr/>
         </div>
     );
 }
