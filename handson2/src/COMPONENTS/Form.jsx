@@ -15,7 +15,8 @@ const Form = () => {
         setFormState({...formState, [name]:value});
     };
 
-    const buttonFunc = () => {
+    const buttonFunc = (event) => {
+        event.preventDefault();
         const saveData = {
             name: formState.name,
             department: formState.department,
@@ -45,20 +46,20 @@ const Form = () => {
                 <br/><br/><br/><br/>
                 <button type="submit" onClick={buttonFunc}>Submit</button>
             </form>
-
+            <div className="dataBox">
             {
                 formState.data.map( (item,index)=>{
                 return(
-                    <div className="dataBox">
+                    
                         <div className="displayBox">
                             <span>Name: {item.name} | </span>
                             <span>Department: {item.department} | </span>
                             <span>Rating: {item.rating}</span>
                         </div>
-                    </div>
                 );
                 })
             }
+            </div>
         </div>
     );
 }
