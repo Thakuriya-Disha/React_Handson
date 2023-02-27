@@ -26,6 +26,7 @@ const Form = () => {
         setFormState({data : arr});
     };
 
+    
     return(
         <div>
             <h1>Employee Feedback Form</h1>
@@ -44,20 +45,22 @@ const Form = () => {
                 <br/><br/><br/><br/>
                 <button type="submit" onClick={buttonFunc}>Submit</button>
             </form>
+
+            {
+                formState.data.map( (item,index)=>{
+                return(
+                    <div className="dataBox">
+                        <div className="displayBox">
+                            <span>Name: {item.name} | </span>
+                            <span>Department: {item.department} | </span>
+                            <span>Rating: {item.rating}</span>
+                        </div>
+                    </div>
+                );
+                })
+            }
         </div>
     );
-
-    formState.data.map( (item,index)=>{
-        return(
-            <div className="dataBox">
-                <div className="displayBox">
-                    <span>Name: {item.name} | </span>
-                    <span>Department: {item.department} | </span>
-                    <span>Rating: {item.rating}</span>
-                </div>
-            </div>
-        );
-    });
 }
 
 export default Form;
