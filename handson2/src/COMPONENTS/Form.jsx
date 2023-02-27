@@ -24,33 +24,21 @@ const Form = () => {
         const arr = formState.data;
         arr.push(saveData);
         setFormState({data : arr});
-
-        formState.map( (item,index)=>{
-            return(
-                <div className="dataBox">
-                    <div className="displayBox">
-                        <span>Name: {item.name} | </span>
-                        <span>Department: {item.department} | </span>
-                        <span>Rating: {item.rating}</span>
-                    </div>
-                </div>
-            );
-        });
     };
 
     return(
         <div>
             <h1>Employee Feedback Form</h1>
             <form>
-                <label> Name: &nbsp; &nbsp;
-                    <input type={"text"} name={"fullname"} value={formState.name} onChange={handleOnChange} />
+                <label> Name : &nbsp; &nbsp;
+                    <input type={"text"} name={"name"} value={formState.name} onChange={handleOnChange} />
                 </label>
                 <br/><br/>
-                <label> Department: &nbsp; &nbsp;
+                <label> Department : &nbsp; &nbsp;
                     <input type={"text"} name={"department"} value={formState.department} onChange={handleOnChange} />
                 </label>
                 <br/><br/>
-                <label> Rating: &nbsp; &nbsp;
+                <label> Rating : &nbsp; &nbsp;
                     <input type={"number"} name={"rating"} value={formState.rating} onChange={handleOnChange} />
                 </label>
                 <br/><br/><br/><br/>
@@ -58,6 +46,18 @@ const Form = () => {
             </form>
         </div>
     );
+
+    formState.data.map( (item,index)=>{
+        return(
+            <div className="dataBox">
+                <div className="displayBox">
+                    <span>Name: {item.name} | </span>
+                    <span>Department: {item.department} | </span>
+                    <span>Rating: {item.rating}</span>
+                </div>
+            </div>
+        );
+    });
 }
 
 export default Form;
