@@ -12,9 +12,9 @@ const Form = () => {
 
     const [submitState, setSubmitState] = useState(false);
 
-    toGoBack = () => {
+    const toGoBack = () => {
         setSubmitState(!submitState);
-    }
+    };
 
     const handleOnChange = (event) => {
         const {name, value} = event.target;
