@@ -3,7 +3,7 @@ const DataPage = (props) => {
     return(
         <>
         <h1>EMPLOYEE FEEDBACK DATA</h1>
-
+        <br/><br/>
         <div className="dataBox">
             {
                 props.empData.map( (item,index)=>{
@@ -17,6 +17,7 @@ const DataPage = (props) => {
                 })
             }
         </div>
+        <br/><br/><br/><br/><br/><br/>
         <button onClick={props.goBack}> GO BACK </button>
         </>
     );

@@ -6,7 +6,7 @@ const Form = () => {
     const [formState, setFormState] = useState({
         name:"",
         department:"",
-        rating:0,
+        rating:"",
         data:[],
     });
 

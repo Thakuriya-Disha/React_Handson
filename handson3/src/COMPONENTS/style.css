@@ -35,7 +35,8 @@ button:hover{
     border:1px solid black;
     border-radius:25px;
     background-color: hotpink;
-    height:40px;
-    width:400px;
-    margin:15px;
+    height:35px;
+    width:465px;
+    margin:20px;
+    padding-top:12px;
 }
