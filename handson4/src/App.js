@@ -4,17 +4,17 @@ import { BrowserRouter,Route,Routes } from "react-router-dom";
 import StudentTable from "./COMPONENTS/Table";
 import { useState } from "react";
 import ContextData from "./ContextData";
-import Edit from "./Component/Edit";
+import Edit from "./COMPONENTS/Edit";
 
 function App() {
   const [data, setData] = useState(
-      [ {name :"John", age:23, course:"MERN", batch:"November"},
-      {name :"Stacy", age:25, course:"MERN", batch:"November"},
-      {name :"Sofia", age:23, course:"MERN", batch:"December"},
-      {name :"Stephen", age:22, course:"MERN", batch:"October"},
-      {name :"Lily", age:23, course:"MERN", batch:"November"},
-      {name :"Harry", age:26, course:"MERN", batch:"September"},
-      {name :"Ron", age:23, course:"MERN", batch:"November"} ]
+      [ {name :"Alison", age:24, course:"MERN", batch:"November"},
+      {name :"Joe", age:23, course:"MERN", batch:"November"},
+      {name :"Taylor", age:25, course:"MERN", batch:"December"},
+      {name :"William", age:24, course:"MERN", batch:"October"},
+      {name :"Lily", age:21, course:"MERN", batch:"November"},
+      {name :"Dove", age:23, course:"MERN", batch:"September"},
+      {name :"Luna", age:22, course:"MERN", batch:"October"} ]
     );
   
   return (

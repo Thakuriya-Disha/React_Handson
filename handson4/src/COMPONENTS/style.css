@@ -3,25 +3,27 @@ html,body{
 }
 body{
     background-image: linear-gradient(lightblue, pink, white);
+    margin:0px;
 }
 .flex{
     display: flex;
     justify-content: space-around;
-    border: 1px solid rgb(8, 8, 79);
-    background-color: rgb(8, 8, 79);
+    border: 1px solid midnightblue;
+    background-color: midnightblue;
     color: white;
     font-family: cursive;
 }
 .home{
-    font-family: cursive;
+    font-family:'Times New Roman', Times, serif;
     color:purple;
+    text-align: center;
 }
 .table{
     border-collapse: collapse;
     background-color: white;
     border-bottom: 1px solid rgb(156, 156, 156);
     width:1300px;
-    margin-left: 80px;
+    margin-left: 20px;
 }
 tr{
     border-bottom: 1px solid rgba(211, 209, 209, 0.625);

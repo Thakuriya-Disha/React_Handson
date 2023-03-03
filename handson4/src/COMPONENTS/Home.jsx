@@ -5,8 +5,8 @@ import './style.css';
 const HomePage = () => {
   return (
     <>
-    <NavBar />
-    <h3 className='home'> This is Home page </h3>
+    <NavBar /><br/><br/><br />
+    <h1 className='home'> This is the Home Page </h1>
     </>
   );
 };

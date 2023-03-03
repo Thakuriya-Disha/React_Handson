@@ -5,8 +5,8 @@ import './style.css';
 const ContactUs = () => {
   return (
     <>
-    <NavBar />
-    <h3 className='home'> This is Contact page </h3>
+    <NavBar /><br/><br/><br />
+    <h1 className='home'> This is Contact Page </h1>
     </>
   );
 };
