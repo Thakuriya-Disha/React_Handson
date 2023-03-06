@@ -1,5 +1,5 @@
-import HigherOrderCompo from './Component/HigherOrderCompo';
-import CounterComponent from './Component/Counter';
+import HigherOrderCompo from './Components/HigherOrderCompo';
+import CounterComponent from './Components/Counter';
 
 function App() {
   return (
