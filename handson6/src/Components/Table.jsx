@@ -32,7 +32,7 @@ const StudentTable = () => {
                     <td>{item.course}</td>
                     <td>{item.batch}</td>
                     <td>
-                        <Link to='/editStudent' state={{data:item.id}}> Edit </Link>
+                        <Link to='/editStudent' state={{data:index}}> Edit </Link>
                     </td>
                 </tr>
             ))}
