@@ -48,3 +48,19 @@ button{
     border-radius: 20px;
     font-weight: bold;
 }
+fieldset{
+    width:400px;
+    display:inline;
+    margin:40px;
+    padding:15px;
+}
+form{
+    margin-top:75px;
+    margin-left:10%;
+}
+.buttons{
+    margin-left:700px;
+}
+input{
+    height:25px;
+}

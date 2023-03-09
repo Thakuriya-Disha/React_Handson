@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBar from './Nav';
-import './style.css';
+import './styles.css';
 
 const ContactUs = () => {
   return (
