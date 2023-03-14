@@ -1,19 +1,20 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate  } from 'react-router-dom';
 import ContextData from '../ContextData';
 import NavBar from './Nav';
 
 
 const StudentTable = () => {
     const DataContext = useContext(ContextData);
+    const nav = useNavigate();
     
     return (
     <>
     <NavBar />
 
     <div className='flex2'>
-    <h1>Student Details</h1> 
-    <button>Add New Student</button>
+    <h1>Student Details</h1>
+    <button onClick={()=>{nav('/addNewStudent')}}> Add New Student </button>
     </div>
 
     <table className='table'>

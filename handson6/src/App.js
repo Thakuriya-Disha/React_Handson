@@ -5,6 +5,7 @@ import StudentTable from "./COMPONENTS/Table";
 import { useState } from "react";
 import ContextData from "./ContextData";
 import Edit from "./COMPONENTS/Edit";
+import AddNew from './COMPONENTS/AddNew';
 
 function App() {
   const [data, setData] = useState(
@@ -24,13 +25,18 @@ function App() {
       <Route path='/' element={<HomePage />}/>
       <Route path='/contact' element={<ContactUs />}/>
       <Route path='/student' element={
-        <ContextData.Provider value={{entries: data, updateFunction: setData}}>
+        <ContextData.Provider value={{entries:data, updateFunction:setData}}>
           <StudentTable />
         </ContextData.Provider>
       }/>
       <Route path='/editStudent' element={
-        <ContextData.Provider value={{entries:data,updateFunction:setData}}>
+        <ContextData.Provider value={{entries:data, updateFunction:setData}}>
           <Edit />
+        </ContextData.Provider>
+      }/>
+      <Route path='/addNewStudent' element={
+        <ContextData.Provider value={{entries:data, updateFunction:setData}}>
+          <AddNew />
         </ContextData.Provider>
       }/>
     </Routes>
