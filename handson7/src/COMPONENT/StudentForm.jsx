@@ -1,24 +1,12 @@
-import React from 'react'
+import React, { useState, useMemo, useEffect } from 'react'
 import { useLocation , useNavigate , useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { updateStudentDetailAction } from '../Redux/Actions/StudentAction';
+import { updateStudentDetailAction } from '../REDUX/Actions/StudentAction';
 import Nav from './Nav';
-import { useState } from 'react';
-import { useMemo } from 'react';
-import { useEffect } from 'react';
-import { addNewStudentAction } from '../Redux/Actions/StudentAction';
-import'./Style.css'
+import { addNewStudentAction } from '../REDUX/Actions/StudentAction';
+import'./Style.css';
 
 export default function StudentForm() {
-//   const DataContext=useContext(ContextData);
-//   const index=useLocation().state.data;
-
-//   const updateObj={
-//     name:DataContext.entries[index].name,
-//     age:DataContext.entries[index].age,
-//     course:DataContext.entries[index].course,
-//     batch:DataContext.entries[index].batch
-//   }
 const dispatch=useDispatch();
 const location = useLocation();
 const params = useParams();

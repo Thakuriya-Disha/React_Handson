@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import ContextData from '../ContextData';
-
 import Nav from './Nav';
 
 
@@ -13,7 +12,7 @@ export default function Table() {
     <Nav />
     <div className='flex2'>
     <h1>Student Details</h1> 
-    <button onClick={()=>{navigate('/newstudent')}}>Add New Student</button>
+    <button onClick={()=>{navigate('/addStudent')}}>Add New Student</button>
     </div>
     <table className='table'>
         <tr>
@@ -31,7 +30,7 @@ export default function Table() {
                     <td>{item.course}</td>
                     <td>{item.batch}</td>
                     <td>
-                        <Link to='/editStudent' state={{data:index}}>Edit</Link>
+                        <Link to='/editStudent/${item.id}' state={{data:index}}>Edit</Link>
                     </td>
 
                 </tr>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from "react-redux";
-import { deleteStudentDetailAction } from '../Redux/Actions/StudentAction';
+import { deleteStudentDetailAction } from '../REDUX/Actions/StudentAction';
 import Nav from './Nav';
 
 
