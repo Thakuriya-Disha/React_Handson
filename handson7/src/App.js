@@ -1,23 +1,18 @@
-import ContactUs from "./COMPONENTS/Contact";
-import HomePage from "./COMPONENTS/Home";
-import { BrowserRouter,Route,Routes } from "react-router-dom";
-import StudentDetailsTable from "./Components/StudentTable";
-import DetailsForm from "./Components/DetailsForm";
+import store from "./Redux/Store";
+import { Provider } from "react-redux";
+import RouterComponent from "./Component/Router";
 
 function App() {
+
   
   return (
-  <>
-  <BrowserRouter>
-    <Routes>
-      <Route path='/' element={<HomePage />}/>
-      <Route path='/contact' element={<ContactUs />}/>
-      <Route path='/student' element={<StudentDetailsTable />}/>
-      <Route path='/editForm' element={<DetailsForm />}/>
-      <Route path='/editForm/:id' element={<DetailsForm />}/>
-    </Routes>
-  </BrowserRouter>
-  </>
+    <>
+   <Provider store={store}>
+      <div className="App">
+       <RouterComponent />
+      </div>
+    </Provider>
+    </>
   );
 }
 
