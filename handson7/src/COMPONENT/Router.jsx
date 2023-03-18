@@ -8,16 +8,15 @@ export default function RouterComponent() {
   
     return (
       <>
-    <BrowserRouter>
-    <Routes>
-      <Route path='/' element={<Home/>}/>
-      <Route path='/contact' element={<Contact/>}/>
-      <Route path='/student' element={<StudentList />}/>
-      <Route path='/editStudent:studentId' element={<StudentForm/>}/>
-      <Route path='/addStudent' element={<StudentForm />}/>
-    </Routes>
-    
-    </BrowserRouter>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/contact' element={<Contact/>}/>
+          <Route path='/student' element={<StudentList />}/>
+          <Route path='/editStudent/:studentId' element={<StudentForm/>}/>
+          <Route path='/addStudent' element={<StudentForm />}/>
+        </Routes>
+      </BrowserRouter>
       </>
     );
   }

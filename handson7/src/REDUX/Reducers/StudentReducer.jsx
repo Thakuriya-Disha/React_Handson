@@ -3,7 +3,7 @@ import {
     DELETE_STUDENT_DETAIL,
     GET_STUDENT_DETAILS,
     UPDATE_STUDENT_DETAIL,
-  } from "../Actions/StudentsAction";
+  } from "../Actions/StudentAction";
   
   const inititalState = {
     studentList: [],
