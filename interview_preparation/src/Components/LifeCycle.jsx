@@ -31,15 +31,15 @@ class LifeCycleExampleCompo extends Component {
                 <br/><br/>
                 <button onClick={ () => {this.setState( {num: this.state.num + 1} ) }}> Click Here </button>
                 <br/><br/>
-                {/*{this.state.show ? <ChildLifeCycle /> : null}
-                <button onClick = { ()=>{this.setState( {show: !this.state.show}) }}> Click Here to Unmount </button>*/}
+                {this.state.show ? <ChildLifeCycle /> : null} <br/><br/>
+                <button onClick = { ()=>{this.setState( {show: !this.state.show}) }}> Click Here to Unmount / Mount </button>
             </>
         )
     }
 }
 export default LifeCycleExampleCompo;
 
-{/*class ChildLifeCycle extends Component{
+class ChildLifeCycle extends Component{
     componentWillUnmount(){
         console.log('component will unmount');
     }
@@ -52,4 +52,3 @@ export default LifeCycleExampleCompo;
         )
     }
 }
-export default ChildLifeCycle;*/}

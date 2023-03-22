@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import axios from 'axios';
 const CounterTwo = () => {
     const [count, setCount] = useState(0);
     const increment = () => {
@@ -8,6 +8,28 @@ const CounterTwo = () => {
     const decrement = () => {
         setCount(count-1);
     }
+
+    fetch('https://jsonplaceholder.typicode.com/todos/1')
+    .then(response => {
+        if(!response.ok){
+            throw new Error('network response not okay');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => {
+        console.log(error);
+    })
+
+    axios.get('https://jsonplaceholder.typicode.com/todos/1')
+    .then(response => {
+        console.log(response.data)
+    })
+    .catch(error => {
+        console.log(error);
+    })
     
     return(
         <>
